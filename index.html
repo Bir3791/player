@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAYER</title>
+    <link rel="stylesheet" href="styles.cc/main.css">
+    <link rel="stylesheet" href="styles.cc/null.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Open+Sans&family=Oswald:wght@600&family=Roboto&family=Shizuru&display=swap"
+          rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/music.js" defer></script>
+</head>
+<body>
+    <div class="up_title">
+       <h1>music custom player</h1> 
+    </div>
+
+    <div class="player">
+
+        <div class="playlist playlistCont">
+            <ul id="playlist">
+                
+            </ul>
+        </div>
+        
+       
+        <img class="frame" id="clean_img" src="imeges/empty.png" alt="wait">
+        <img class="frame" id="menu_img" src="imeges/menu.png" alt="wait">
+        <img class="frame" id="prew_img" src="imeges/prew.png" alt="wait">
+        <img class="frame" id="next_img" src="imeges/next.png" alt="wait">
+        <img class="frame" id="play_img_pause" src="imeges/play_pause.png" alt="wait">
+        
+        <div class="display">
+            <div class="container_song_title">
+               <span class="song_title">song#1</span> 
+            </div>
+
+            <audio class="audio" src="audio/4UBAND-Дышу.mp3"></audio>
+
+            <div class="animation">
+                <img class="animation_in" src="imeges/image_1.jpg" alt="">
+            </div>
+            
+            <div class="line">
+                <div class="progress"></div>
+            </div>
+
+            <button id="menu">>>></button>
+            <button id="prew">>>></button>
+            <button id="next">>>></button>
+            <button id="play_stop">>>></button>
+            <button id="volume"><img class="volume" src="/imeges/allVolume.png" alt=""></button>
+        </div>
+
+        
+        
+    </div>
+
+    <div class="animation_big">
+
+    </div>
+
+
+</body>
+</html>
