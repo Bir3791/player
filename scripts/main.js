@@ -121,7 +121,7 @@ function prewSong() {
         LoadingSong(songs[songItem])
         play()
     } else {
-        pause()
+        stop()
         songItem = 4;
         LoadingSong(songs[songItem])
         play()
@@ -209,10 +209,11 @@ function OffDisplayPlayList() {
 
 function onDisplayPlayList() {
          for (let i = 0; i < songs.length; i++) {
-            liForText = document.createElement('li'); 
+            liForText = document.createElement('li');
             liForText.className = "liForText";
             liForText.innerHTML = `${songs[i].artist + "  " + songs[i].song}`
             playList.appendChild(liForText);
+            liForText.setAttribute('menuIndex', i);
             liForText.addEventListener(`click`, playListPlay);
             liForText.addEventListener('mouseover', onOver);
             liForText.addEventListener('mouseout', onOut);
@@ -231,14 +232,17 @@ function onOver() {
 }
 
 function playListPlay() {
-    let value = event.target;
-    value.classList.add('liForText_mouseClik');
-    setTimeout(() => { value.classList.remove('liForText_mouseClik') }, 100)
-    for (let i = 0; i < songs.length; i++){
-        if (value.textContent == songs[i].artist + "  " + songs[i].song) {
-            playListPlayPlaying([i])
-        }
-     }
+    let value = +event.target.getAttribute('menuIndex')
+    console.log(value);
+    playListPlayPlaying(value)
+    // let value = event.target;
+    // value.classList.add('liForText_mouseClik');
+    // setTimeout(() => { value.classList.remove('liForText_mouseClik') }, 100)
+    // for (let i = 0; i < songs.length; i++){
+    //     if (value.textContent == songs[i].artist + "  " + songs[i].song) {
+    //         playListPlayPlaying([i])
+    //     }
+    //  }
     }
 
 function playListPlayPlaying(index) {
